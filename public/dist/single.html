@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Aethel Gym | Sign Up — Paid Membership</title>
+  <!-- TailwindCSS v3 + Google Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    body { background: #FFFFFF; }
+    .btn-orange { background-color: #F97316; transition: all 0.2s ease; }
+    .btn-orange:hover { background-color: #EA580C; transform: translateY(-2px); box-shadow: 0 8px 20px -6px rgba(249,115,22,0.3); }
+    .btn-outline-black { border: 1.5px solid #111111; background: transparent; transition: 0.2s; }
+    .btn-outline-black:hover { background-color: #111111; color: white; transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER (same for all pages) ========== -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-orange-500 shadow-sm flex items-center justify-center text-white font-bold text-lg">A</div>
+        <span class="text-xl font-bold tracking-tight text-gray-900">AETHEL<span class="text-orange-500">.</span></span>
+        <div class="hidden sm:block w-px h-5 bg-gray-300"></div>
+        <span class="text-xs font-medium text-gray-500 hidden sm:block">STRENGTH STUDIO</span>
+      </div>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="signup.html" class="text-orange-600 font-semibold border-b-2 border-orange-500 pb-0.5">Sign up</a>
+        <a href="shop.html" class="text-gray-700 hover:text-orange-600 transition">Shop</a>
+        <a href="gallery.html" class="text-gray-700 hover:text-orange-600 transition">Gallery</a>
+        <a href="plans.html" class="text-gray-700 hover:text-orange-600 transition">Plans</a>
+        <a href="zones.html" class="text-gray-700 hover:text-orange-600 transition">Zones</a>
+        <a href="about.html" class="text-gray-700 hover:text-orange-600 transition">About</a>
+        <div class="relative ml-1 w-8 h-8 rounded-full border border-gray-200 bg-white flex items-center justify-center hover:border-orange-300">
+          <span class="text-gray-700 text-sm">🛒</span>
+        </div>
+      </div>
+      <div class="flex md:hidden gap-3">
+        <button id="mobileMenuBtn" class="text-gray-800 text-xl">☰</button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 px-5 py-3 flex flex-col gap-3 text-sm font-medium">
+      <a href="signup.html" class="text-orange-600 font-semibold">Sign up</a>
+      <a href="shop.html" class="text-gray-700">Shop</a>
+      <a href="gallery.html" class="text-gray-700">Gallery</a>
+      <a href="plans.html" class="text-gray-700">Plans</a>
+      <a href="zones.html" class="text-gray-700">Zones</a>
+      <a href="about.html" class="text-gray-700">About</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- SIGN UP PAGE — PAID ONLY, NO FREE TRIALS -->
+    <section class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-24">
+      <div class="grid md:grid-cols-2 gap-14 items-start">
+        <div>
+          <span class="text-orange-500 text-sm font-semibold uppercase tracking-wide">become a member</span>
+          <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2 leading-tight">Join Aethel.<br>No free trials. <span class="text-orange-500">Commit to strength.</span></h1>
+          <p class="text-gray-500 text-lg mt-5">We don’t offer free trials — because real progress starts with dedication. Choose your plan, fill the form, and start training today. Access to all strength zones, group classes and recovery area.</p>
+          <div class="mt-8 bg-gray-50 rounded-2xl p-5 border border-gray-100">
+            <div class="flex gap-3 items-center"><div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center">💪</div><div><h3 class="font-bold">Immediate access</h3><p class="text-sm text-gray-500">After sign up you'll receive a QR code for gym entry.</p></div></div>
+            <div class="flex gap-3 items-center mt-4"><div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center">📋</div><div><h3 class="font-bold">No hidden fees</h3><p class="text-sm text-gray-500">Monthly or annual — you choose, cancel anytime.</p></div></div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-6 md:p-8">
+          <h2 class="text-2xl font-bold text-gray-900">Start your membership</h2>
+          <p class="text-gray-500 text-sm mt-1">Select a plan and complete registration (paid).</p>
+          <form id="signupForm" class="mt-6 space-y-4">
+            <div class="grid grid-cols-2 gap-4"><div><label class="block text-xs font-semibold text-gray-700">First name</label><input type="text" required class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-orange-400"></div><div><label class="block text-xs font-semibold text-gray-700">Last name</label><input type="text" required class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm"></div></div>
+            <div><label class="block text-xs font-semibold text-gray-700">Email address</label><input type="email" required class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm"></div>
+            <div><label class="block text-xs font-semibold text-gray-700">Phone</label><input type="tel" required class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm"></div>
+            <div><label class="block text-xs font-semibold text-gray-700">Choose membership</label><select class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm"><option value="69">Starter — $69/month (4 classes + gym)</option><option value="119">Core — $119/month (unlimited classes)</option><option value="189">Elite — $189/month (unlimited + PT + recovery)</option></select></div>
+            <button type="submit" class="w-full btn-orange text-white py-3 rounded-xl font-bold text-base mt-3">Pay & join →</button>
+            <p class="text-center text-[11px] text-gray-400">Secure payment · no free trials, just results</p>
+          </form>
+          <div id="signupMessage" class="text-center text-sm mt-4 hidden text-green-600"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t border-gray-200 pt-10 pb-6 mt-6">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pb-6">
+        <div><div class="flex items-center gap-2 mb-3"><div class="w-8 h-8 rounded-lg bg-orange-500 text-white flex items-center justify-center text-sm">A</div><span class="font-bold text-gray-900">AETHEL</span></div><p class="text-xs text-gray-400">Strength studio · NYC</p></div>
+        <div><h4 class="text-sm font-semibold">Explore</h4><ul class="text-xs text-gray-500 mt-2 space-y-1"><li>Membership</li><li>Schedule</li><li>Coaches</li></ul></div>
+        <div><h4 class="text-sm font-semibold">Support</h4><ul class="text-xs text-gray-500 mt-2 space-y-1"><li>Contact</li><li>FAQs</li><li>Policies</li></ul></div>
+        <div><h4 class="text-sm font-semibold">Follow</h4><ul class="text-xs text-gray-500 mt-2 space-y-1"><li>Instagram</li><li>Strava</li><li>Newsletter</li></ul></div>
+      </div>
+      <div class="border-t border-gray-100 pt-5 text-center text-[11px] text-gray-400">© AETHEL Training Club — built for movement, zero ego.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobileMenuBtn')?.addEventListener('click', () => {
+      const menu = document.getElementById('mobileMenu');
+      if (menu) menu.classList.toggle('hidden');
+    });
+    const form = document.getElementById('signupForm');
+    if(form) form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const msgDiv = document.getElementById('signupMessage');
+      msgDiv.classList.remove('hidden');
+      msgDiv.textContent = '✅ Membership request received! We’ll send QR code within 2h.';
+      msgDiv.classList.add('text-green-600');
+      form.reset();
+    });
+  </script>
+</body>
+</html>

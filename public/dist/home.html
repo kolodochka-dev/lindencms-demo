@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Aethel Gym | Strength & Movement Studio — NYC</title>
+  <!-- TailwindCSS v3 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts + simple custom hover enhancements -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Inter', sans-serif; transition: all 0.2s ease; }
+    body { background: #FFFFFF; }
+    .btn-orange { background-color: #F97316; transition: 0.2s; }
+    .btn-orange:hover { background-color: #EA580C; transform: translateY(-2px); box-shadow: 0 8px 18px -6px rgba(249,115,22,0.3); }
+    .btn-outline-black { border: 1.5px solid #111111; background: transparent; transition: 0.2s; }
+    .btn-outline-black:hover { background-color: #111111; color: white; transform: translateY(-2px); }
+    .card-hover { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.08); }
+    .gallery-img-placeholder { background-size: cover; background-position: center; transition: transform 0.4s ease; }
+    .gallery-card:hover .gallery-img-placeholder { transform: scale(1.03); }
+    .orange-badge { background-color: #FFF3E8; color: #F97316; }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- HEADER / NAVIGATION (white with orange accents) -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-orange-500 shadow-sm flex items-center justify-center text-white font-bold text-lg">A</div>
+        <span class="text-xl font-bold tracking-tight text-gray-900">HYPERION</span>
+      </div>
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium">
+        <a href="#" class="text-gray-700 hover:text-orange-600">Sign Up</a>
+        <a href="#" class="text-gray-700 hover:text-orange-600">Membership</a>
+        <a href="#" class="text-gray-700 hover:text-orange-600">Areas</a>
+        <a href="#" class="text-gray-700 hover:text-orange-600">Gallery</a>
+        <a href="#" class="text-gray-700 hover:text-orange-600">About</a>
+        <div class="relative ml-2 w-8 h-8 rounded-full border border-gray-200 bg-white flex items-center justify-center hover:border-orange-300">
+          <span class="text-gray-700 text-sm">🛒</span>
+        </div>
+      </div>
+      <div class="flex md:hidden gap-3">
+        <div class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center">🍔</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="bg-white">
+
+    <!-- 1️⃣ DESCRIPTOR + CALL TO SIGN UP FOR TRAININGS (hero style with bold CTA) -->
+    <section class="max-w-7xl mx-auto px-5 md:px-8 pt-16 md:pt-24 pb-14">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 rounded-full py-1.5 px-4 mb-5">
+            <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+            <span class="text-xs font-semibold text-orange-700 uppercase tracking-wide">limited spots — spring 2025</span>
+          </div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">Train with <br><span class="text-orange-500">purpose.</span> Move like an athlete.</h1>
+          <p class="text-gray-500 text-lg mt-6 max-w-lg leading-relaxed">Small-group strength training, mobility drills, and high-intensity sessions led by elite coaches. No egos, just results.</p>
+          <div class="flex flex-wrap gap-4 mt-8">
+            <button class="btn-orange px-7 py-3.5 rounded-full text-white font-semibold text-sm shadow-md flex items-center gap-2">Claim your free trial →</button>
+            <button class="btn-outline-black px-7 py-3.5 rounded-full text-gray-900 font-semibold text-sm">View schedule</button>
+          </div>
+          <div class="flex items-center gap-5 mt-8 text-sm text-gray-500">
+            <div class="flex -space-x-2">
+              <div class="w-8 h-8 rounded-full bg-gray-200 border-2 border-white flex items-center justify-center text-[10px]">🏋️</div>
+              <div class="w-8 h-8 rounded-full bg-orange-100 border-2 border-white flex items-center justify-center text-[10px]">🧘</div>
+              <div class="w-8 h-8 rounded-full bg-gray-300 border-2 border-white flex items-center justify-center text-[10px]">⚡</div>
+            </div>
+            <span>300+ members active · NYC</span>
+          </div>
+        </div>
+        <div class="relative rounded-3xl overflow-hidden shadow-xl h-80 md:h-[400px]">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&auto=format" alt="gym training session" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+          <div class="absolute bottom-5 left-5 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-xs font-semibold text-gray-800">🔥 High intensity / small classes</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2️⃣ SELLING SECTION (lightweight items: sport food, gear small accessories) -->
+    <!-- <section class="bg-gray-50/40 py-16 border-y border-gray-100">
+      <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="text-center mb-10">
+          <span class="text-orange-500 text-sm font-semibold uppercase tracking-wide">studio shop</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-1">Fuel your session</h2>
+          <p class="text-gray-500 max-w-xl mx-auto mt-3">Small items to grab at the front desk — organic bars, electrolytes, and gym essentials.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover">
+            <div class="h-48 overflow-hidden"><img src="https://images.unsplash.com/photo-1622484211887-5cef15afb0ed?w=400&auto=format" class="w-full h-full object-cover" alt="protein bar"></div>
+            <div class="p-4"><h3 class="font-bold text-gray-900">Plant Protein Bar</h3><p class="text-xs text-gray-500 mt-1">20g · chocolate sea salt</p><div class="flex justify-between items-center mt-3"><span class="font-bold text-orange-600">$3.90</span><button class="text-xs border border-orange-200 px-3 py-1 rounded-full hover:bg-orange-50">add</button></div></div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover">
+            <div class="h-48 overflow-hidden"><img src="https://images.unsplash.com/photo-1615485731367-47d43719e5ba?w=400&auto=format" class="w-full h-full object-cover" alt="electrolytes"></div>
+            <div class="p-4"><h3 class="font-bold text-gray-900">Electrolyte Mix</h3><p class="text-xs text-gray-500 mt-1">citrus · zero sugar</p><div class="flex justify-between items-center mt-3"><span class="font-bold text-orange-600">$2.50</span><button class="text-xs border border-orange-200 px-3 py-1 rounded-full hover:bg-orange-50">add</button></div></div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover">
+            <div class="h-48 overflow-hidden"><img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=400&auto=format" class="w-full h-full object-cover" alt="grip straps"></div>
+            <div class="p-4"><h3 class="font-bold text-gray-900">Lifting Straps</h3><p class="text-xs text-gray-500 mt-1">cotton · pair</p><div class="flex justify-between items-center mt-3"><span class="font-bold text-orange-600">$12</span><button class="text-xs border border-orange-200 px-3 py-1 rounded-full hover:bg-orange-50">add</button></div></div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover">
+            <div class="h-48 overflow-hidden"><img src="https://images.unsplash.com/photo-1611124210016-529495a7f406?w=400&auto=format" class="w-full h-full object-cover" alt="chalk bag"></div>
+            <div class="p-4"><h3 class="font-bold text-gray-900">Liquid Chalk</h3><p class="text-xs text-gray-500 mt-1">eco friendly</p><div class="flex justify-between items-center mt-3"><span class="font-bold text-orange-600">$8.50</span><button class="text-xs border border-orange-200 px-3 py-1 rounded-full hover:bg-orange-50">add</button></div></div>
+          </div>
+        </div>
+        <div class="text-center mt-8 text-sm text-gray-400 italic">*available at front desk — grab & go</div>
+      </div>
+    </section> -->
+
+    <!-- 3️⃣ ADVANTAGES / MOTIVATION BLOCK (benefits with icons) -->
+    <section class="max-w-7xl mx-auto px-5 md:px-8 py-20">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <span class="text-orange-500 text-sm font-semibold uppercase">why aethel</span>
+          <h2 class="text-3xl font-bold text-gray-900 mt-2 mb-5">Strength, community & progression</h2>
+          <div class="space-y-5">
+            <div class="flex gap-4"><div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600">✓</div><div><h4 class="font-bold">Science-based programming</h4><p class="text-gray-500 text-sm">Periodized cycles, strength benchmarks, and mobility drills.</p></div></div>
+            <div class="flex gap-4"><div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600">🔥</div><div><h4 class="font-bold">Small class sizes (max 12)</h4><p class="text-gray-500 text-sm">Personal attention, form correction, and real progress.</p></div></div>
+            <div class="flex gap-4"><div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600">🏆</div><div><h4 class="font-bold">No initiation fees</h4><p class="text-gray-500 text-sm">Month-to-month memberships, no hidden contracts.</p></div></div>
+          </div>
+        </div>
+        <div class="order-1 md:order-2 rounded-2xl overflow-hidden shadow-lg"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=700&auto=format" alt="motivation gym" class="w-full h-80 object-cover"></div>
+      </div>
+    </section>
+
+    <!-- 4️⃣ GALLERY (dynamic grid with authentic gym images) -->
+    <section class="bg-white py-12">
+      <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="text-center mb-10"><span class="text-orange-500 text-sm font-semibold">inside aethel</span><h2 class="text-3xl font-bold text-gray-900 mt-1">Raw moments. Real strength.</h2></div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="gallery-card overflow-hidden rounded-2xl cursor-pointer"><div class="gallery-img-placeholder h-56 w-full" style="background-image: url('https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=500&auto=format'); background-size: cover;"></div></div>
+          <div class="gallery-card overflow-hidden rounded-2xl cursor-pointer"><div class="gallery-img-placeholder h-56 w-full" style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&auto=format'); background-size: cover;"></div></div>
+          <div class="gallery-card overflow-hidden rounded-2xl cursor-pointer"><div class="gallery-img-placeholder h-56 w-full" style="background-image: url('https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&auto=format'); background-size: cover;"></div></div>
+          <div class="gallery-card overflow-hidden rounded-2xl cursor-pointer"><div class="gallery-img-placeholder h-56 w-full" style="background-image: url('https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=500&auto=format'); background-size: cover;"></div></div>
+          <div class="gallery-card overflow-hidden rounded-2xl col-span-2"><div class="gallery-img-placeholder h-64 w-full" style="background-image: url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1000&auto=format'); background-size: cover;"></div></div>
+          <div class="gallery-card overflow-hidden rounded-2xl"><div class="gallery-img-placeholder h-64 w-full" style="background-image: url('https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=500&auto=format'); background-size: cover;"></div></div>
+          <div class="gallery-card overflow-hidden rounded-2xl"><div class="gallery-img-placeholder h-64 w-full" style="background-image: url('https://images.unsplash.com/photo-1590096796030-50dc16c5ab3c?w=500&auto=format'); background-size: cover;"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5️⃣ SUBSCRIPTION PLANS (membership tiers) -->
+    <section class="max-w-7xl mx-auto px-5 md:px-8 py-20">
+      <div class="text-center max-w-2xl mx-auto mb-12"><span class="text-orange-500 text-sm font-semibold">membership</span><h2 class="text-3xl font-bold text-gray-900 mt-1">Plans that fit your rhythm</h2><p class="text-gray-500 mt-3">Cancel anytime · access to all group classes + open gym</p></div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- starter -->
+        <div class="bg-white border border-gray-200 rounded-3xl p-6 shadow-sm hover:shadow-md transition"><div class="text-center"><div class="text-2xl font-bold text-gray-900">Starter</div><div class="mt-3"><span class="text-4xl font-black">$69</span><span class="text-gray-400">/mo</span></div><p class="text-sm text-gray-500 mt-2">4 classes / month + open gym</p><ul class="mt-6 space-y-3 text-sm text-left"><li>✓ access to strength & cardio zones</li><li>✓ community WODs</li><li>✓ locker & towel service</li></ul><button class="w-full mt-8 border border-orange-500 text-orange-600 py-2 rounded-full hover:bg-orange-50 font-medium">Choose plan</button></div></div>
+        <!-- core (most popular) -->
+        <div class="bg-white border-2 border-orange-300 rounded-3xl p-6 shadow-lg relative"><div class="absolute -top-3 left-6 bg-orange-500 text-white text-xs px-3 py-1 rounded-full">popular</div><div class="text-center"><div class="text-2xl font-bold text-gray-900">Core</div><div class="mt-3"><span class="text-4xl font-black">$119</span><span class="text-gray-400">/mo</span></div><p class="text-sm text-gray-500 mt-2">unlimited classes + open gym</p><ul class="mt-6 space-y-3 text-sm text-left"><li>✓ unlimited signature strength/HIIT</li><li>✓ guest pass (2x/month)</li><li>✓ 10% off proshop & cafe</li></ul><button class="w-full mt-8 bg-orange-500 text-white py-2 rounded-full hover:bg-orange-600 font-medium">Get unlimited</button></div></div>
+        <!-- elite -->
+        <div class="bg-white border border-gray-200 rounded-3xl p-6 shadow-sm"><div class="text-center"><div class="text-2xl font-bold text-gray-900">Elite</div><div class="mt-3"><span class="text-4xl font-black">$189</span><span class="text-gray-400">/mo</span></div><p class="text-sm text-gray-500 mt-2">unlimited + PT + recovery</p><ul class="mt-6 space-y-3 text-sm text-left"><li>✓ 1 personal session per month</li><li>✓ recovery zone (sauna/cryo)</li><li>✓ priority class booking</li></ul><button class="w-full mt-8 border border-orange-500 text-orange-600 py-2 rounded-full hover:bg-orange-50">Join elite</button></div></div>
+      </div>
+    </section>
+
+    <!-- 6️⃣ FORM: BUY SUBSCRIPTION OR SIGN UP FOR TRAINING (lead form) -->
+    <section class="bg-gray-50/60 py-16 border-t border-gray-100">
+      <div class="max-w-6xl mx-auto px-5 md:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div><span class="text-orange-500 text-sm font-semibold">start your journey</span><h2 class="text-3xl font-bold text-gray-900 mt-2">Sign up for a trial or membership</h2><p class="text-gray-500 mt-3">Fill the form — our team will contact you within 2h to confirm your spot.</p><div class="mt-6 flex gap-3"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center">📞</div><span class="text-sm">(212) 555 0970</span></div><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center">✉️</div><span class="text-sm">hello@aethel.fit</span></div></div></div>
+          <div class="bg-white rounded-2xl shadow-md p-6 border border-gray-100"><form><div class="grid grid-cols-2 gap-4"><div><label class="block text-xs font-medium text-gray-600 mb-1">First name</label><input type="text" class="w-full border border-gray-200 rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-orange-300"></div><div><label class="block text-xs font-medium text-gray-600 mb-1">Last name</label><input type="text" class="w-full border border-gray-200 rounded-xl px-4 py-2 text-sm"></div></div><div class="mt-3"><label class="block text-xs font-medium text-gray-600 mb-1">Email</label><input type="email" class="w-full border border-gray-200 rounded-xl px-4 py-2 text-sm"></div><div class="mt-3"><label class="block text-xs font-medium text-gray-600 mb-1">Phone</label><input type="tel" class="w-full border border-gray-200 rounded-xl px-4 py-2 text-sm"></div><div class="mt-4"><label class="block text-xs font-medium text-gray-600 mb-1">I'm interested in</label><select class="w-full border border-gray-200 rounded-xl px-4 py-2 text-sm"><option>Free trial class (strength / HIIT)</option><option>Core membership — unlimited</option><option>Elite membership</option><option>Starter plan</option></select></div><button class="w-full mt-6 bg-orange-500 text-white py-3 rounded-xl font-semibold hover:bg-orange-600 transition">Send request →</button><p class="text-center text-[11px] text-gray-400 mt-4">No spam, no hidden fees. We’ll text you a gym tour invite.</p></form></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7️⃣ TRAINING ZONES (services) -->
+    <section class="max-w-7xl mx-auto px-5 md:px-8 py-20">
+      <div class="text-center mb-12"><span class="text-orange-500 text-sm font-semibold uppercase">training zones</span><h2 class="text-3xl font-bold text-gray-900 mt-2">Find your discipline</h2><p class="text-gray-500 max-w-xl mx-auto">Specialized areas with world-class coaching and gear.</p></div>
+      <div class="grid md:grid-cols-3 gap-7">
+        <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-white"><img src="https://images.unsplash.com/photo-1605296867424-35fc25c46e35?w=600&auto=format" class="h-56 w-full object-cover"><div class="p-5"><h3 class="text-xl font-bold">Strength Lab</h3><p class="text-gray-500 text-sm mt-1">Eleiko racks, calibrated plates, and deadlift platforms. Open 5am–11pm.</p><div class="mt-4 text-orange-600 text-sm font-medium">coaching: powerlifting & oly →</div></div></div>
+        <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-white"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format" class="h-56 w-full object-cover"><div class="p-5"><h3 class="text-xl font-bold">HIIT Yard</h3><p class="text-gray-500 text-sm mt-1">SkiErg, assault bikes, turf zone, sleds. Timed intervals with heart-rate monitoring.</p><div class="mt-4 text-orange-600 text-sm font-medium">classes every 45min →</div></div></div>
+        <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-white"><img src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=600&auto=format" class="h-56 w-full object-cover"><div class="p-5"><h3 class="text-xl font-bold">Mobility & Recovery</h3><p class="text-gray-500 text-sm mt-1">Normatec boots, percussion guns, stretch zones, and guided active recovery.</p><div class="mt-4 text-orange-600 text-sm font-medium">included in Core+ →</div></div></div>
+      </div>
+      <div class="text-center mt-10"><button class="btn-outline-black px-6 py-2.5 rounded-full text-sm font-semibold">explore all training zones →</button></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-gray-200 pt-12 pb-6">
+      <div class="max-w-7xl mx-auto px-5 md:px-8"><div class="grid grid-cols-2 md:grid-cols-4 gap-8 pb-8"><div><div class="flex items-center gap-2 mb-3"><div class="w-8 h-8 rounded-lg bg-orange-500 text-white flex items-center justify-center">A</div><span class="font-bold text-gray-900">AETHEL</span></div><p class="text-xs text-gray-400">Strength studio NYC</p></div><div><h4 class="text-sm font-semibold">Trainings</h4><ul class="text-xs text-gray-500 mt-2 space-y-1"><li>Schedule</li><li>Coaches</li><li>Pricing</li></ul></div><div><h4 class="text-sm font-semibold">Studio</h4><ul class="text-xs text-gray-500 mt-2 space-y-1"><li>Locations</li><li>Membership</li><li>Gift cards</li></ul></div><div><h4 class="text-sm font-semibold">Follow</h4><ul class="text-xs text-gray-500 mt-2 space-y-1"><li>Instagram</li><li>Strava club</li><li>Podcast</li></ul></div></div><div class="border-t border-gray-100 pt-6 text-center text-[11px] text-gray-400">© AETHEL Training Club — built for movement, powered by community.</div></div>
+    </footer>
+  </main>
+</body>
+</html>

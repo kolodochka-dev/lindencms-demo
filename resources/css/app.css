@@ -1,0 +1,64 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {}
+
+* {
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease;
+}
+
+body {
+    background: #FFFFFF;
+}
+
+.btn-orange {
+    background-color: #F97316;
+    transition: 0.2s;
+}
+
+.btn-orange:hover {
+    background-color: #EA580C;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px -6px rgba(249, 115, 22, 0.3);
+}
+
+.btn-outline-black {
+    border: 1.5px solid #111111;
+    background: transparent;
+    transition: 0.2s;
+}
+
+.btn-outline-black:hover {
+    background-color: #111111;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.card-hover {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-img-placeholder {
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+}
+
+.gallery-card:hover .gallery-img-placeholder {
+    transform: scale(1.03);
+}
+
+.orange-badge {
+    background-color: #FFF3E8;
+    color: #F97316;
+}
