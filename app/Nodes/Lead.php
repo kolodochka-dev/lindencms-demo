@@ -28,8 +28,10 @@ class Lead extends AppNode
     #[Validation('required')]
     public _String $last_name;
 
+    #[View(label: 'email', readonly: true)]
     public _Email $email;
 
+    #[View(label: 'phone', readonly: true)]
     public _String $phone;
 
     #[Relationship(Membership::class)]

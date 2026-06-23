@@ -6,6 +6,7 @@ use LindenCMS\Cms\Attributes\File;
 use LindenCMS\Cms\Attributes\Validation;
 use LindenCMS\Cms\Attributes\View;
 use LindenCMS\Core\Attributes\Collection;
+use LindenCMS\Cms\Attributes\Database;
 use LindenCMS\Cms\Nodes\_String;
 use LindenCMS\Cms\Nodes\_Text;
 use LindenCMS\Cms\Nodes\AppNode;
@@ -27,6 +28,7 @@ class About extends AppNode
     public _String $title;
 
     #[Validation('required')]
+    #[Database(type: 'string', length: 255)]
     public _String $subtitle;
 
     #[Validation('required')]

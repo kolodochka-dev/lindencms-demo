@@ -88,19 +88,5 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../lindencms/core"
-        },
-        {
-            "type": "path",
-            "url": "../lindencms/templator"
-        },
-        {
-            "type": "path",
-            "url": "../lindencms/cms"
-        }
-    ]
+    "prefer-stable": true
 }
