@@ -386,11 +386,6 @@ CREATE TABLE `sessions` (
   KEY `sessions_last_activity_index` (`last_activity`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('c6xRC6pEZsVRdsNNvvl9UtS47jTkxlHGb3SlLYCy',	12,	'127.0.0.1',	'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0',	'eyJfdG9rZW4iOiJBc1ZGT3JCczJWTnowYWU1V3JtczEzWXgzclpwdVpqbzdQdmlLZUx3IiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cL2h5cGVyaW9uLnRlc3RcL3NpZ251cD9tZW1iZXJzaGlwPTMiLCJyb3V0ZSI6InNpdGUuc2lnbnVwIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfSwidXJsIjp7ImludGVuZGVkIjoiaHR0cDpcL1wvaHlwZXJpb24udGVzdFwvbGluZGVuY21zXC9ub2Rlc1wvbWVtYmVyc2hpcHMifSwibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiOjEyLCJmaWx0ZXIiOnsiYWJvdXQiOltdLCJnYWxsZXJ5IjpbXSwibGVhZHMiOltdLCJhcmVhcyI6W10sIm1lbWJlcnNoaXBzIjpbXX0sInNvcnQiOnsiYWJvdXQiOltdLCJnYWxsZXJ5IjpbXSwibGVhZHMiOltdLCJhcmVhcyI6W10sIm1lbWJlcnNoaXBzIjpbXX0sInBlclBhZ2UiOnsiYWJvdXQiOjE1LCJnYWxsZXJ5IjoxNSwibGVhZHMiOjE1LCJhcmVhcyI6MTUsIm1lbWJlcnNoaXBzIjoxNX19',	1782382453),
-('IXjFob2W5woUON2kyFfe1Gk3qU8oezJjujPiZAvR',	NULL,	'127.0.0.1',	'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0',	'eyJfdG9rZW4iOiJFaXRHTHBiNlZ4ZHhxUldCUVNXOFdVWlRlU0FnOVJuOFpQNXZ2SmdNIiwidXJsIjp7ImludGVuZGVkIjoiaHR0cDpcL1wvaHlwZXJpb24udGVzdFwvbGluZGVuY21zXC9ub2Rlc1wvYXJlYXMifSwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cL2h5cGVyaW9uLnRlc3RcL2xpbmRlbmNtc1wvbm9kZXNcL2FyZWFzIiwicm91dGUiOiJub2Rlcy5pbmRleCJ9LCJfZmxhc2giOnsib2xkIjpbXSwibmV3IjpbXX19',	1782381945),
-('Wl6PwgqrCJsHJHLsI7MnT9ncPaMjOdLNoSbAVt6x',	NULL,	'127.0.0.1',	'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0',	'eyJfdG9rZW4iOiJ6bEtrNkNtYUw0amk1a2tFUzdaS0FnVlFweWJKSE11cm5nQ2ZONUYzIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cL2h5cGVyaW9uLnRlc3RcL2xvZ2luIiwicm91dGUiOiJsb2dpbiJ9LCJfZmxhc2giOnsib2xkIjpbXSwibmV3IjpbXX19',	1782381945);
-
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
