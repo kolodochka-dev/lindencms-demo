@@ -12,6 +12,21 @@
     transition: all 0.2s ease;
 }
 
+html, body {
+    height: 100%;
+}
+
+/* Make main flex column and fill remaining space */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
 body {
     background: #FFFFFF;
 }

@@ -15,7 +15,7 @@
         rel="stylesheet">
 </head>
 
-<body class="antialiased">
+<body class="antialiased min-h-screen flex flex-col">
     <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-5 md:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
             <a href="{{ route('site.home') }}" class="flex items-center gap-3">
@@ -31,60 +31,98 @@
                 <a href="{{ route('site.areas') }}" class="text-gray-700 hover:text-orange-600">Areas</a>
                 <a href="{{ route('site.gallery') }}" class="text-gray-700 hover:text-orange-600">Gallery</a>
                 <a href="{{ route('site.about') }}" class="text-gray-700 hover:text-orange-600">About</a>
-                <!-- <div
-                    class="relative ml-2 w-8 h-8 rounded-full border border-gray-200 bg-white flex items-center justify-center hover:border-orange-300">
-                    <span class="text-gray-700 text-sm">🛒</span>
-                </div> -->
             </div>
-            <div class="flex md:hidden gap-3">
-                <div class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center">🍔</div>
-            </div>
+            <!-- Mobile Menu Button -->
+            <button 
+                id="mobileMenuButton"
+                class="md:hidden w-10 h-10 rounded-lg border border-gray-300 flex items-center justify-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                aria-label="Toggle menu"
+                onclick="this.classList.toggle('active')"
+            >
+                <!-- Hamburger SVG Icon -->
+                <svg 
+                    class="w-5 h-5 text-gray-700 transition-transform duration-200"
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                >
+                    <path 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        stroke-width="2" 
+                        d="M4 6h16M4 12h16M4 18h16"
+                    />
+                </svg>
+            </button>
         </div>
     </header>
-    <main class="bg-white">
-        @yield('content')
 
-        <!-- FOOTER -->
-        <footer class="bg-white border-t border-gray-200 pt-12 pb-6">
-            <div class="max-w-7xl mx-auto px-5 md:px-8">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pb-8">
-                    <div>
-                        <div class="flex items-center gap-2 mb-3">
-                            <div class="w-8 h-8 rounded-lg bg-orange-500 text-white flex items-center justify-center">H
-                            </div><span class="font-bold text-gray-900">HYPERION</span>
-                        </div>
-                        <p class="text-xs text-gray-400">Strength studio</p>
-                    </div>
-                    <div>
-                        <h4 class="text-sm font-semibold">Trainings</h4>
-                        <ul class="text-xs text-gray-500 mt-2 space-y-1">
-                            <li>Schedule</li>
-                            <li>Coaches</li>
-                            <li>Pricing</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-sm font-semibold">Studio</h4>
-                        <ul class="text-xs text-gray-500 mt-2 space-y-1">
-                            <li>Locations</li>
-                            <li>Membership</li>
-                            <li>Gift cards</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-sm font-semibold">Follow</h4>
-                        <ul class="text-xs text-gray-500 mt-2 space-y-1">
-                            <li>Instagram</li>
-                            <li>Strava club</li>
-                            <li>Podcast</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="border-t border-gray-100 pt-6 text-center text-[11px] text-gray-400">© HYPERION Training Club
-                    — built for movement, powered by community.</div>
-            </div>
-        </footer>
+    <main class="bg-white flex-1">
+        @yield('content')
     </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-gray-200 pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-5 md:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="w-8 h-8 rounded-lg bg-orange-500 text-white flex items-center justify-center">H
+                        </div><span class="font-bold text-gray-900">HYPERION</span>
+                    </div>
+                    <p class="text-xs text-gray-400">Strength studio</p>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold">Trainings</h4>
+                    <ul class="text-xs text-gray-500 mt-2 space-y-1">
+                        <li>Schedule</li>
+                        <li>Coaches</li>
+                        <li>Pricing</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold">Studio</h4>
+                    <ul class="text-xs text-gray-500 mt-2 space-y-1">
+                        <li>Locations</li>
+                        <li>Membership</li>
+                        <li>Gift cards</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold">Follow</h4>
+                    <ul class="text-xs text-gray-500 mt-2 space-y-1">
+                        <li>Instagram</li>
+                        <li>Strava club</li>
+                        <li>Podcast</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-100 pt-6 text-center text-[11px] text-gray-400">© HYPERION Training Club
+                — built for movement, powered by community.</div>
+        </div>
+    </footer>
+
+    <!-- Simple mobile menu toggle script -->
+    <script>
+        document.getElementById('mobileMenuButton')?.addEventListener('click', function() {
+            const menu = document.querySelector('.md\\:flex');
+            if (menu) {
+                menu.classList.toggle('hidden');
+                menu.classList.toggle('flex');
+                menu.classList.toggle('flex-col');
+                menu.classList.toggle('absolute');
+                menu.classList.toggle('top-full');
+                menu.classList.toggle('left-0');
+                menu.classList.toggle('right-0');
+                menu.classList.toggle('bg-white');
+                menu.classList.toggle('p-4');
+                menu.classList.toggle('shadow-lg');
+                menu.classList.toggle('border-b');
+                menu.classList.toggle('border-gray-100');
+                menu.classList.toggle('gap-3');
+            }
+        });
+    </script>
 </body>
 
 </html>
